@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ML.server module &mdash; MaxLeap-Python-SDK 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MaxLeap-Python-SDK 1.0.0 文档" href="index.html"/>
+        <link rel="prev" title="ML.relation module" href="ML.relation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> MaxLeap-Python-SDK
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ML.errors.html">ML.errors module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.object_.html">ML.object_ module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.operation.html">ML.operation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.query.html">ML.query module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.relation.html">ML.relation module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">ML.server module</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MaxLeap-Python-SDK</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>ML.server module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ML.server.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="ml-server-module">
+<h1>ML.server module<a class="headerlink" href="#ml-server-module" title="永久链接至标题">¶</a></h1>
+<p>ML.server模块为用户提供Cloudcode的注册接口和本地测试接口。</p>
+<dl class="data">
+<dt id="Server">
+<code class="descname">Server</code><a class="headerlink" href="#Server" title="永久链接至目标">¶</a></dt>
+<dd><p>Server为单例实例，提供如下方法。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Server.Function">
+<code class="descclassname">&#64;</code><code class="descclassname">Server.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#Server.Function" title="永久链接至目标">¶</a></dt>
+<dd><p>Function装饰器，用来注册一个用户function。</p>
+<p>用户function应该是这样一个函数：</p>
+<p>接受参数为一个 <a class="reference internal" href="#Request" title="Request"><code class="xref py py-class docutils literal"><span class="pre">Request</span></code></a> 实例，返回参数为一个 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 实例</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@Server.Function</span>
+<span class="k">def</span> <span class="nf">helloword</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Responese</span><span class="p">(</span><span class="s">&#39;helloword&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Server.Job">
+<code class="descclassname">&#64;</code><code class="descclassname">Server.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#Server.Job" title="永久链接至目标">¶</a></dt>
+<dd><p>Job装饰器，用来注册一个用户job。</p>
+<p>用户job应该是这样一个函数：</p>
+<p>接受参数为一个 <a class="reference internal" href="#Request" title="Request"><code class="xref py py-class docutils literal"><span class="pre">Request</span></code></a> 实例，返回参数为一个 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 实例</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@Server.Job</span>
+<span class="k">def</span> <span class="nf">helloword</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Responese</span><span class="p">(</span><span class="s">&#39;helloword&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Server.before_save">
+<code class="descclassname">&#64;</code><code class="descclassname">Server.</code><code class="descname">before_save</code><span class="sig-paren">(</span><em>class_name</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#Server.before_save" title="永久链接至目标">¶</a></dt>
+<dd><p>before_save 装饰器，用来注册一个特定 class 的 before_save hook。</p>
+<p>一个hook应该是这样一个函数：</p>
+<p>接受参数为一个 <a class="reference internal" href="ML.object_.html#ML.object_.Object" title="ML.object_.Object"><code class="xref py py-class docutils literal"><span class="pre">ML.object_.Object</span></code></a> 对象，返回参数为一个 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 实例或者None</p>
+<p>如果返回值为 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 对象，那么就会短路掉后面的执行流程。</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@Server.before_save</span><span class="p">(</span><span class="s">&#39;Ninja&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">helloword</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Server.after_save">
+<code class="descclassname">&#64;</code><code class="descclassname">Server.</code><code class="descname">after_save</code><span class="sig-paren">(</span><em>class_name</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#Server.after_save" title="永久链接至目标">¶</a></dt>
+<dd><p>after_save 装饰器，用来注册一个特定 class 的 after_save hook。</p>
+<p>一个hook应该是这样一个函数：</p>
+<p>接受参数为一个 <a class="reference internal" href="ML.object_.html#ML.object_.Object" title="ML.object_.Object"><code class="xref py py-class docutils literal"><span class="pre">ML.object_.Object</span></code></a> 对象，返回参数为一个 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 实例或者None</p>
+<p>如果返回值为 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 对象，那么就会短路掉后面的执行流程。</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@Server.after_save</span><span class="p">(</span><span class="s">&#39;Ninja&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">helloword</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Server.after_update">
+<code class="descclassname">&#64;</code><code class="descclassname">Server.</code><code class="descname">after_update</code><span class="sig-paren">(</span><em>class_name</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#Server.after_update" title="永久链接至目标">¶</a></dt>
+<dd><p>after_update 装饰器，用来注册一个特定 class 的 after_update hook。</p>
+<p>一个hook应该是这样一个函数：</p>
+<p>接受参数为一个 <a class="reference internal" href="ML.object_.html#ML.object_.Object" title="ML.object_.Object"><code class="xref py py-class docutils literal"><span class="pre">ML.object_.Object</span></code></a> 对象，返回参数为一个 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 实例或者None</p>
+<p>如果返回值为 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 对象，那么就会短路掉后面的执行流程。</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@Server.after_update</span><span class="p">(</span><span class="s">&#39;Ninja&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">helloword</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Server.before_delete">
+<code class="descclassname">&#64;</code><code class="descclassname">Server.</code><code class="descname">before_delete</code><span class="sig-paren">(</span><em>class_name</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#Server.before_delete" title="永久链接至目标">¶</a></dt>
+<dd><p>before_delete 装饰器，用来注册一个特定 class 的 before_delete hook。</p>
+<p>一个hook应该是这样一个函数：</p>
+<p>接受参数为一个 <a class="reference internal" href="ML.object_.html#ML.object_.Object" title="ML.object_.Object"><code class="xref py py-class docutils literal"><span class="pre">ML.object_.Object</span></code></a> 对象，返回参数为一个 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 实例或者None</p>
+<p>如果返回值为 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 对象，那么就会短路掉后面的执行流程。</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@Server.before_delete</span><span class="p">(</span><span class="s">&#39;Ninja&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">helloword</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Server.after_delete">
+<code class="descclassname">&#64;</code><code class="descclassname">Server.</code><code class="descname">after_delete</code><span class="sig-paren">(</span><em>class_name</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#Server.after_delete" title="永久链接至目标">¶</a></dt>
+<dd><p>after_delete 装饰器，用来注册一个特定 class 的 after_delete hook。</p>
+<p>一个hook应该是这样一个函数：</p>
+<p>接受参数为一个 <a class="reference internal" href="ML.object_.html#ML.object_.Object" title="ML.object_.Object"><code class="xref py py-class docutils literal"><span class="pre">ML.object_.Object</span></code></a> 对象，返回参数为一个 <a class="reference internal" href="#Response" title="Response"><code class="xref py py-class docutils literal"><span class="pre">Response</span></code></a> 实例或者None</p>
+<p>如果返回值为Response对象，那么就会短路掉后面的执行流程。</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@Server.after_delete</span><span class="p">(</span><span class="s">&#39;Ninja&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">helloword</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>Server实例还提供一些本地测试Function和Job的方法：</p>
+<dl class="function">
+<dt>
+<code class="descname">Server.callFunction(self, name, *args, **kwargs):</code></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> &#8211; 需要调用的function name。</li>
+<li><strong>data</strong> &#8211; Http Body.</li>
+<li><strong>headers</strong> &#8211; Http Headers.</li>
+<li><strong>input_stream</strong> &#8211; an optional input stream. Do not specify this and data.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">response</span> <span class="o">=</span> <span class="n">Server</span><span class="o">.</span><span class="n">callFunction</span><span class="p">(</span><span class="s">&#39;helloword&#39;</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;Content-Type&quot;</span><span class="p">:</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span><span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;test&quot;</span><span class="p">}))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descname">Server.callJob(self, name, *args, **kwargs):</code></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> &#8211; 需要调用的job name。</li>
+<li><strong>data</strong> &#8211; Http Body.</li>
+<li><strong>headers</strong> &#8211; Http Headers.</li>
+<li><strong>input_stream</strong> &#8211; an optional input stream. Do not specify this and data.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">response</span> <span class="o">=</span> <span class="n">Server</span><span class="o">.</span><span class="n">callJob</span><span class="p">(</span><span class="s">&#39;helloword&#39;</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;Content-Type&quot;</span><span class="p">:</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span><span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;test&quot;</span><span class="p">}))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="Response">
+<em class="property">class </em><code class="descname">Response</code><span class="sig-paren">(</span><em>response=None</em>, <em>status=None</em>, <em>headers=None</em>, <em>mimetype=None</em>, <em>content_type=None</em>, <em>direct_passthrough=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Response" title="永久链接至目标">¶</a></dt>
+<dd><blockquote>
+<div>The response object that is used by default in Flask. Works like the response object from Werkzeug but is set to have an HTML mimetype by default.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>response</strong> &#8211; Http body.</li>
+<li><strong>status</strong> &#8211; A string with a response status.</li>
+<li><strong>headers</strong> &#8211; A Headers object representing the response headers.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="Request">
+<em class="property">class </em><code class="descname">Request</code><span class="sig-paren">(</span><em>environ</em>, <em>populate_request=True</em>, <em>shallow=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Request" title="永久链接至目标">¶</a></dt>
+<dd><p>The request object used by default in Flask. Remembers the matched endpoint and view arguments.</p>
+<dl class="attribute">
+<dt id="Request.form">
+<code class="descname">form</code><a class="headerlink" href="#Request.form" title="永久链接至目标">¶</a></dt>
+<dd><p>A MultiDict with the parsed form data from POST or PUT requests. Please keep in mind that file uploads will not end up here, but instead in the files attribute.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.args">
+<code class="descname">args</code><a class="headerlink" href="#Request.args" title="永久链接至目标">¶</a></dt>
+<dd><p>A MultiDict with the parsed contents of the query string. (The part in the URL after the question mark).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.values">
+<code class="descname">values</code><a class="headerlink" href="#Request.values" title="永久链接至目标">¶</a></dt>
+<dd><p>A CombinedMultiDict with the contents of both form and args.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.cookies">
+<code class="descname">cookies</code><a class="headerlink" href="#Request.cookies" title="永久链接至目标">¶</a></dt>
+<dd><p>A dict with the contents of all cookies transmitted with the request.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.stream">
+<code class="descname">stream</code><a class="headerlink" href="#Request.stream" title="永久链接至目标">¶</a></dt>
+<dd><p>If the incoming form data was not encoded with a known mimetype the data is stored unmodified in this stream for consumption. Most of the time it is a better idea to use data which will give you that data as a string. The stream only returns the data once.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.headers">
+<code class="descname">headers</code><a class="headerlink" href="#Request.headers" title="永久链接至目标">¶</a></dt>
+<dd><p>The incoming request headers as a dictionary like object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.data">
+<code class="descname">data</code><a class="headerlink" href="#Request.data" title="永久链接至目标">¶</a></dt>
+<dd><p>Contains the incoming request data as string in case it came with a mimetype Flask does not handle.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.json">
+<code class="descname">json</code><a class="headerlink" href="#Request.json" title="永久链接至目标">¶</a></dt>
+<dd><p>If the mimetype is application/json this will contain the parsed JSON data. Otherwise this will be None.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.files">
+<code class="descname">files</code><a class="headerlink" href="#Request.files" title="永久链接至目标">¶</a></dt>
+<dd><p>A MultiDict with files uploaded as part of a POST or PUT request. Each file is stored as FileStorage object. It basically behaves like a standard file object you know from Python, with the difference that it also has a save() function that can store the file on the filesystem.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.environ">
+<code class="descname">environ</code><a class="headerlink" href="#Request.environ" title="永久链接至目标">¶</a></dt>
+<dd><p>The underlying WSGI environment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.method">
+<code class="descname">method</code><a class="headerlink" href="#Request.method" title="永久链接至目标">¶</a></dt>
+<dd><p>The current request method (POST, GET etc.)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Request.path">
+<code class="descname">path</code><a class="headerlink" href="#Request.path" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Request.script_root">
+<code class="descname">script_root</code><a class="headerlink" href="#Request.script_root" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Request.url">
+<code class="descname">url</code><a class="headerlink" href="#Request.url" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Request.base_url">
+<code class="descname">base_url</code><a class="headerlink" href="#Request.base_url" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Request.url_root">
+<code class="descname">url_root</code><a class="headerlink" href="#Request.url_root" title="永久链接至目标">¶</a></dt>
+<dd><p>Provides different ways to look at the current URL. Imagine your application is listening on the following URL:</p>
+<blockquote>
+<div><a class="reference external" href="http://www.example.com/myapplication">http://www.example.com/myapplication</a></div></blockquote>
+<p>And a user requests the following URL:</p>
+<blockquote>
+<div><a class="reference external" href="http://www.example.com/myapplication/page.html?x=y">http://www.example.com/myapplication/page.html?x=y</a></div></blockquote>
+<p>In this case the values of the above mentioned attributes would be the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">path</th>
+<th class="head">/page.html</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>script_root</td>
+<td>/myapplication</td>
+</tr>
+<tr class="row-odd"><td>base_url</td>
+<td><a class="reference external" href="http://www.example.com/myapplication/page.html">http://www.example.com/myapplication/page.html</a></td>
+</tr>
+<tr class="row-even"><td>url</td>
+<td><a class="reference external" href="http://www.example.com/myapplication/page.html?x=y">http://www.example.com/myapplication/page.html?x=y</a></td>
+</tr>
+<tr class="row-odd"><td>url_root</td>
+<td><a class="reference external" href="http://www.example.com/myapplication/">http://www.example.com/myapplication/</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ML.relation.html" class="btn btn-neutral" title="ML.relation module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2015, czhou.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

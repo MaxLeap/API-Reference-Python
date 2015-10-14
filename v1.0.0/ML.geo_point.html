@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ML.geo_point module &mdash; MaxLeap-Python-SDK 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MaxLeap-Python-SDK 1.0.0 文档" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> MaxLeap-Python-SDK
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="ML.errors.html">ML.errors module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.object_.html">ML.object_ module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.operation.html">ML.operation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.query.html">ML.query module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.relation.html">ML.relation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.server.html">ML.server module</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MaxLeap-Python-SDK</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>ML.geo_point module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ML.geo_point.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-ML.geo_point">
+<span id="ml-geo-point-module"></span><h1>ML.geo_point module<a class="headerlink" href="#module-ML.geo_point" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="ML.geo_point.GeoPoint">
+<em class="property">class </em><code class="descclassname">ML.geo_point.</code><code class="descname">GeoPoint</code><span class="sig-paren">(</span><em>latitude=0</em>, <em>longitude=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.geo_point.GeoPoint" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ML.geo_point.GeoPoint.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ML.geo_point.GeoPoint.dump" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ML.geo_point.GeoPoint.kilometers_to">
+<code class="descname">kilometers_to</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.geo_point.GeoPoint.kilometers_to" title="永久链接至目标">¶</a></dt>
+<dd><p>Returns the distance from this GeoPoint to another in kilometers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#ML.geo_point.GeoPoint" title="ML.geo_point.GeoPoint"><em>GeoPoint</em></a>) &#8211; point the other GeoPoint</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ML.geo_point.GeoPoint.latitude">
+<code class="descname">latitude</code><a class="headerlink" href="#ML.geo_point.GeoPoint.latitude" title="永久链接至目标">¶</a></dt>
+<dd><p>当前对象的纬度</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ML.geo_point.GeoPoint.longitude">
+<code class="descname">longitude</code><a class="headerlink" href="#ML.geo_point.GeoPoint.longitude" title="永久链接至目标">¶</a></dt>
+<dd><p>当前对象的经度</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.geo_point.GeoPoint.miles_to">
+<code class="descname">miles_to</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.geo_point.GeoPoint.miles_to" title="永久链接至目标">¶</a></dt>
+<dd><p>Returns the distance from this GeoPoint to another in miles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#ML.geo_point.GeoPoint" title="ML.geo_point.GeoPoint"><em>GeoPoint</em></a>) &#8211; point the other GeoPoint</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.geo_point.GeoPoint.radians_to">
+<code class="descname">radians_to</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.geo_point.GeoPoint.radians_to" title="永久链接至目标">¶</a></dt>
+<dd><p>Returns the distance from this GeoPoint to another in radians.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#ML.geo_point.GeoPoint" title="ML.geo_point.GeoPoint"><em>GeoPoint</em></a>) &#8211; point the other GeoPoint</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2015, czhou.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,950 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ML.query module &mdash; MaxLeap-Python-SDK 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MaxLeap-Python-SDK 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="ML.relation module" href="ML.relation.html"/>
+        <link rel="prev" title="ML.operation module" href="ML.operation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> MaxLeap-Python-SDK
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ML.errors.html">ML.errors module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.object_.html">ML.object_ module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.operation.html">ML.operation module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">ML.query module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.relation.html">ML.relation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ML.server.html">ML.server module</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MaxLeap-Python-SDK</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>ML.query module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ML.query.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-ML.query">
+<span id="ml-query-module"></span><h1>ML.query module<a class="headerlink" href="#module-ML.query" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="ML.query.Query">
+<em class="property">class </em><code class="descclassname">ML.query.</code><code class="descname">Query</code><span class="sig-paren">(</span><em>query_class</em>, <em>principal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ML.query.Query.add_ascending">
+<code class="descname">add_ascending</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.add_ascending" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询排序条件。之前指定的排序条件优先级更高。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>key</strong> &#8211; 排序字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.add_descending">
+<code class="descname">add_descending</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.add_descending" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询排序条件。之前指定的排序条件优先级更高。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>key</strong> &#8211; 排序字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ML.query.Query.and_">
+<em class="property">classmethod </em><code class="descname">and_</code><span class="sig-paren">(</span><em>*queries</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.and_" title="永久链接至目标">¶</a></dt>
+<dd><p>根据传入的 Query 对象，构造一个新的 AND 查询。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>queries</strong> &#8211; 需要构造的子查询列表</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.ascending">
+<code class="descname">ascending</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.ascending" title="永久链接至目标">¶</a></dt>
+<dd><p>限制查询返回结果以指定字段升序排序。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>key</strong> &#8211; 排序字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.contained_in">
+<code class="descname">contained_in</code><span class="sig-paren">(</span><em>key</em>, <em>values</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.contained_in" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值在查询值列表中</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>values</strong> (<em>list or tuple</em>) &#8211; 查询条件值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.contains">
+<code class="descname">contains</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.contains" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定最短的值，包含指定字符串。在数据量比较大的情况下会比较慢。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 需要包含的字符串</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.contains_all">
+<code class="descname">contains_all</code><span class="sig-paren">(</span><em>key</em>, <em>values</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.contains_all" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值全部包含与查询值列表中</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>values</strong> (<em>list or tuple</em>) &#8211; 查询条件值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.count">
+<code class="descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.count" title="永久链接至目标">¶</a></dt>
+<dd><p>返回满足查询条件的对象的数量。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回类型:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.descending">
+<code class="descname">descending</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.descending" title="永久链接至目标">¶</a></dt>
+<dd><p>限制查询返回结果以指定字段降序排序。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>key</strong> &#8211; 排序字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.destroy_all">
+<code class="descname">destroy_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.destroy_all" title="永久链接至目标">¶</a></dt>
+<dd><p>在服务器上删除所有满足查询条件的对象。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">MaxLeapError</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.does_not_exists">
+<code class="descname">does_not_exists</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.does_not_exists" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象不包含指定字段</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>key</strong> &#8211; 查询条件字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.does_not_match_key_in_query">
+<code class="descname">does_not_match_key_in_query</code><span class="sig-paren">(</span><em>key</em>, <em>query_key</em>, <em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.does_not_match_key_in_query" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定字段的值，与另外一个查询对象的返回结果指定的值不相同。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>query_key</strong> &#8211; 查询对象返回结果的字段名</li>
+<li><strong>query</strong> (<a class="reference internal" href="#ML.query.Query" title="ML.query.Query"><em>Query</em></a>) &#8211; 查询对象</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.does_not_match_query">
+<code class="descname">does_not_match_query</code><span class="sig-paren">(</span><em>key</em>, <em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.does_not_match_query" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定字段的值，与另外一个查询对象的返回结果不相同。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>query</strong> (<a class="reference internal" href="#ML.query.Query" title="ML.query.Query"><em>Query</em></a>) &#8211; 查询对象</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.dump" title="永久链接至目标">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body">当前对象的序列化结果</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.endswith">
+<code class="descname">endswith</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.endswith" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定最短的值，以指定字符串结尾。在数据量比较大的情况下会比较慢。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 需要查询的字符串</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.equal_to">
+<code class="descname">equal_to</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.equal_to" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，查询字段的值必须为指定值。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件的字段名</li>
+<li><strong>value</strong> &#8211; 查询条件的值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.exists">
+<code class="descname">exists</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.exists" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象包含指定字段</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>key</strong> &#8211; 查询条件字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.find">
+<code class="descname">find</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.find" title="永久链接至目标">¶</a></dt>
+<dd><p>根据查询条件，获取包含所有满足条件的对象。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回类型:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.first">
+<code class="descname">first</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.first" title="永久链接至目标">¶</a></dt>
+<dd><p>根据查询获取最多一个对象。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body">查询结果</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="ML.object_.html#ML.object_.Object" title="ML.object_.Object">Object</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">MaxLeapError</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>object_id</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.get" title="永久链接至目标">¶</a></dt>
+<dd><p>根据 objectId 查询。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>object_id</strong> &#8211; 要查询对象的 objectId</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body">查询结果</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="ML.object_.html#ML.object_.Object" title="ML.object_.Object">Object</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.greater_than">
+<code class="descname">greater_than</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.greater_than" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值大于查询值</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 查询条件值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.greater_than_or_equal_to">
+<code class="descname">greater_than_or_equal_to</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.greater_than_or_equal_to" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值大于等于查询值</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 查询条件值名</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.include">
+<code class="descname">include</code><span class="sig-paren">(</span><em>*keys</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.include" title="永久链接至目标">¶</a></dt>
+<dd><p>指定查询返回结果中包含关联表字段。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>keys</strong> &#8211; 关联子表字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.less_than">
+<code class="descname">less_than</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.less_than" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值小于查询值</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 查询条件值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.less_than_or_equal_to">
+<code class="descname">less_than_or_equal_to</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.less_than_or_equal_to" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值小于等于查询值</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 查询条件值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.limit">
+<code class="descname">limit</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.limit" title="永久链接至目标">¶</a></dt>
+<dd><p>设置查询返回结果的数量。如果不设置，默认为 100。最大返回数量为 1000，如果超过这个数量，需要使用多次查询来获取结果。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>n</strong> &#8211; 限制结果的数量</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.matched">
+<code class="descname">matched</code><span class="sig-paren">(</span><em>key</em>, <em>regex</em>, <em>ignore_case=False</em>, <em>multi_line=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.matched" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定字段满足指定的正则表达式。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>regex</strong> &#8211; 查询正则表达式</li>
+<li><strong>ignore_case</strong> &#8211; 查询是否忽略大小写，默认不忽略</li>
+<li><strong>multi_line</strong> &#8211; 查询是否陪陪多行，默认不匹配</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.matched_key_in_query">
+<code class="descname">matched_key_in_query</code><span class="sig-paren">(</span><em>key</em>, <em>query_key</em>, <em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.matched_key_in_query" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定字段的值，与另外一个查询对象的返回结果指定的值相同。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>query_key</strong> &#8211; 查询对象返回结果的字段名</li>
+<li><strong>query</strong> (<a class="reference internal" href="#ML.query.Query" title="ML.query.Query"><em>Query</em></a>) &#8211; 查询对象</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.matches_query">
+<code class="descname">matches_query</code><span class="sig-paren">(</span><em>key</em>, <em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.matches_query" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定字段的值，与另外一个查询对象的返回结果相同。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>query</strong> (<a class="reference internal" href="#ML.query.Query" title="ML.query.Query"><em>Query</em></a>) &#8211; 查询对象</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.near">
+<code class="descname">near</code><span class="sig-paren">(</span><em>key</em>, <em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.near" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制返回结果指定字段值的位置与给定地理位置临近。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>point</strong> &#8211; 需要查询的地理位置</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.not_contained_in">
+<code class="descname">not_contained_in</code><span class="sig-paren">(</span><em>key</em>, <em>values</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.not_contained_in" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值不在查询值列表中</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>values</strong> (<em>list or tuple</em>) &#8211; 查询条件值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.not_equal_to">
+<code class="descname">not_equal_to</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.not_equal_to" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果指定字段的值与查询值不同</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 查询条件值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ML.query.Query.or_">
+<em class="property">classmethod </em><code class="descname">or_</code><span class="sig-paren">(</span><em>*queries</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.or_" title="永久链接至目标">¶</a></dt>
+<dd><p>根据传入的 Query 对象，构造一个新的 OR 查询。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>queries</strong> &#8211; 需要构造的子查询列表</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.select">
+<code class="descname">select</code><span class="sig-paren">(</span><em>*keys</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.select" title="永久链接至目标">¶</a></dt>
+<dd><p>指定查询返回结果中只包含某些字段。可以重复调用，每次调用的包含内容都将会被返回。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>keys</strong> &#8211; 包含字段名</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.skip">
+<code class="descname">skip</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.skip" title="永久链接至目标">¶</a></dt>
+<dd><p>查询条件中跳过指定个数的对象，在做分页时很有帮助。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>n</strong> &#8211; 需要跳过对象的个数</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.startswith">
+<code class="descname">startswith</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.startswith" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制查询结果对象指定最短的值，以指定字符串开头。在数据量比较大的情况下会比较慢。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>value</strong> &#8211; 需要查询的字符串</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.within_geo_box">
+<code class="descname">within_geo_box</code><span class="sig-paren">(</span><em>key</em>, <em>southwest</em>, <em>northeast</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.within_geo_box" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制返回结果指定字段值的位置在指定坐标范围之内。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>southwest</strong> &#8211; 限制范围西南角坐标</li>
+<li><strong>northeast</strong> &#8211; 限制范围东北角坐标</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.within_kilometers">
+<code class="descname">within_kilometers</code><span class="sig-paren">(</span><em>key</em>, <em>point</em>, <em>distance</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.within_kilometers" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制返回结果指定字段值的位置在某点的一段距离之内。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>point</strong> &#8211; 查询地理位置</li>
+<li><strong>distance</strong> &#8211; 距离限定（千米）</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.within_miles">
+<code class="descname">within_miles</code><span class="sig-paren">(</span><em>key</em>, <em>point</em>, <em>distance</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.within_miles" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制返回结果指定字段值的位置在某点的一段距离之内。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>point</strong> &#8211; 查询地理位置</li>
+<li><strong>distance</strong> &#8211; 距离限定（英里）</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ML.query.Query.within_radians">
+<code class="descname">within_radians</code><span class="sig-paren">(</span><em>key</em>, <em>point</em>, <em>distance</em><span class="sig-paren">)</span><a class="headerlink" href="#ML.query.Query.within_radians" title="永久链接至目标">¶</a></dt>
+<dd><p>增加查询条件，限制返回结果指定字段值的位置在某点的一段距离之内。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; 查询条件字段名</li>
+<li><strong>point</strong> &#8211; 查询地理位置</li>
+<li><strong>distance</strong> &#8211; 距离限定（弧度）</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ML.query.Query" title="ML.query.Query">Query</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ML.relation.html" class="btn btn-neutral float-right" title="ML.relation module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ML.operation.html" class="btn btn-neutral" title="ML.operation module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2015, czhou.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
